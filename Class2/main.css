@@ -6,6 +6,11 @@
     background-color:
 }
 
+.card {
+    height: 595px;
+    overflow: hidden;
+}
+
 /* [class^="col-"]:first-child {
     background-color: aquamarine;
 }
