@@ -20,7 +20,7 @@
     
     <!-- form -->
     <form action="">
-        How are ya feeling?: <input type="text"><br>
+        How are ya feeling?: <input id="feelings" type="text"><br>
     </form>
 
     <!-- header text -->
@@ -49,6 +49,10 @@
 
             $(".fade-button").click(function(){
                 $("#docHeader").fadeOut(800);
+            });
+
+            $("#feelings").blur(function(){
+                prompt("WRITE YOUR FEELINGS!");
             });
         });
 
