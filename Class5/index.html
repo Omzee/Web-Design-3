@@ -1,46 +1,66 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
 
-  <div class="button-container">
-    <button onclick="changeMyText()">Change Text</button>
-    <button onclick="boostEsteem()">Boost self esteem</button>
-  </div>
+    <!-- buttons -->
+    <div class="button-container">
+        <button class="change-button">Change Text</button>
+        <button class="alert-button">Boost self esteem</button>
+    </div>
 
-  <h1 id="docHeader">Goodbye, Sky!</h1>
-  <script>
-    var docHeader = document.getElementById("docHeader");
+    <!-- header text -->
+    <h1 id="docHeader">Just some normal, boring text.</h1>
 
-    var changeMyText = function(){
-      // this is my header text
-      var myText = "Hello, World!";
-      docHeader.innerHTML = myText;
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-      docHeader.style.fontFamily = "Impact,Charcoal,sans-serif";
+    <script>
+        $(document).ready(function () {
+            $(".change-button").click(function () {
+                var redVal = Math.random() * 255;
+                var greenVal = Math.random() * 255;
+                var blueVal = Math.random() * 255;
+                $("#docHeader").css("color", "rgb(" + redVal + ", " + greenVal + ", " + blueVal + ")");
+                console.log("rgb:", redVal, greenVal, blueVal)
 
-      var red = Math.random()*255;
-      var green  = Math.random()*255;
-      var blue = Math.random()*255;
+                $("#docHeader").css("font-family", "Impact");
 
-      var RGBval = "rgb(" + red + ", " + green + ", " + blue + ")";
-      docHeader.style.color = RGBval;
-    }
-    function boostEsteem() {
-    alert("ur beautiful <3");
-}
+                $("#docHeader").html("<h1> NOW IT'S PARTY TEXT! </h1>");
+            });
 
-    // this is a numberic value for my header font size
-    // var myTextSize = Math.random()*100;
-    // console.log(docHeader);
-    // docHeader.style.fontSize = myTextSize + "px";
-  </script>
+            $(".alert-button").click(function(){
+                alert("u r byootiful <3");
+            });
+        });
+
+//     var docHeader = document.getElementById("docHeader");
+
+//     var changeMyText = function(){
+//       var myText = "CRAAAAZZZY TEEEEXXTT";
+//       docHeader.innerHTML = myText;
+
+//       docHeader.style.fontFamily = "Impact,Charcoal,sans-serif";
+
+//       var red = Math.random()*255;
+//       var green  = Math.random()*255;
+//       var blue = Math.random()*255;
+
+//       var RGBval = "rgb(" + red + ", " + green + ", " + blue + ")";
+//       docHeader.style.color = RGBval;
+//     }
+//     function boostEsteem() {
+//     alert("ur beautiful <3");
+// }
+    </script>
 </body>
+
 </html>
