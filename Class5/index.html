@@ -15,7 +15,13 @@
     <div class="button-container">
         <button class="change-button">Change Text</button>
         <button class="alert-button">Boost self esteem</button>
+        <button class="fade-button">Make go away</button>
     </div>
+    
+    <!-- form -->
+    <form action="">
+        How are ya feeling?: <input type="text"><br>
+    </form>
 
     <!-- header text -->
     <h1 id="docHeader">Just some normal, boring text.</h1>
@@ -39,6 +45,10 @@
 
             $(".alert-button").click(function(){
                 alert("u r byootiful <3");
+            });
+
+            $(".fade-button").click(function(){
+                $("#docHeader").fadeOut(800);
             });
         });
 
