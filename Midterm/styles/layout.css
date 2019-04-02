@@ -1,7 +1,48 @@
 body {
-    padding-top: 56px;
+    padding-top: 80px;
+    background-color: #FFB4A2;
   }
 
-  .navbar-dark{
-    color: rgba(255, 255, 255, 0.5);
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sriracha' !important;
+}
+
+  .navbar {
+    font-size: 26px;
   }
+
+  /* change the background color */
+.navbar-custom {
+  background-color: #6D6875;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: #B5838D;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #B5838D;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 180, 162, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #FFB4A2;
+} 
+
+.jumbotron {
+  background-color: #E5989B;
+}
+
+.btn-outline-custom {
+  background-color: #B5838D;
+}
