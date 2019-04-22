@@ -6,125 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <style>
-        .invalid-feedback, .valid-feedback {
-            display: block;
-        }
-    </style>
-    <title>Auto Select</title>
+    <title>Judgemental Cookie Survey</title>
   </head>
+
   <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Select your dream car!</h1>
-            </div>
-        </div>
+      <div class="container">
 
-        <div class="row">
-            <div class="col">
+          <!-- <div class="row">
+              <div class="col">
+                    <h1> PAGE HEADER </h1>
+              </div>
+          </div> -->
 
+          <div class="row">
+              <div class="col">
                 <form action="form-process.php" method="POST">
+
                     <div class="form-group">
-                    <label for="carMake">Select the make of the car:</label>
-                    <select class="form-control" id="carMake" name="carmake">
-                        <option value="audi">Audi</option>
-                        <option value="bmw">BMW</option>
-                        <option value="lexus">Lexus</option>
-                        <option value="merc">Mercedes</option>
-                        <option value="tesla">Tesla</option>
-                    </select>
+                        <label for="cookieChoice">Select your favorite cookie:</label>
+                        <select class="form-control" id="cookieChoice" name="cookie">
+                            <option value="chocolate">Chocolate Chip</option>
+                            <!-- Result: Were you always this awesome?
+                            Yeah, I was just born like this.
+                            No, I had to learn, but it came easily.
+                            No, it takes some effort, but at least I don't eat those other cookies.
+                             -->
+                            <option value="oatmeal">Oatmeal Raisin</option>
+                            <!-- Result: What's wrong with you?
+                            I was raised by wolves.
+                            My parents never loved me.
+                            I was bullied as a child.
+                             -->
+                            <option value="fig">Fig Newton</option>
+                            <!-- Result: Honestly, why did you say you liked Fig Newtons? 
+                            I think it makes me look smart (it doesn't).
+                            I think they're healthy (they aren't).
+                            I honestly like the pulpy, stringy, seedy, taste and texture of figs (weirdo).
+                            -->
+                            <option value="suger">Suger</option> 
+                            <!-- Result: How old are you? 
+                                *holds up x fingers* [4-9]-->
+                        </select>
                     </div>
 
                     <div class="form-group">
-                    <label for="carModel">Select the model of the car:</label>
-                    <select class="form-control" id="carModel" name="carmodel" disabled>
-                        <option></option>
-                    </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="priceRange">How much would you pay?</label>
-                        <input type="range" class="custom-range" min="0" max="100000" id="priceRange" >
-                        
+                        <label for="queries"></label>
+                        <select class="form-control" id="queries" name="judgement" disabled>
+                            <option></option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-
-            </div>
-        </div>
-    </div>
+                
+              </div>
+          </div>
+      </div>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <script>
         $(document).ready(function(){
-            var audiModels = ["S2", "S3", "S5", "S7"];
-            var bmwModels = ["2-Series", "3-Series", "4-Series", "5-Series", "7-Series"];
-            var mercModels = ["Class-A", "Class-B", "Class-C", "Class-E", "Class-S", "Class-G"];
-            var lexusModels = ["IS", "ES", "LX"];
-            var teslaModels = ["Roadster", "Model S", "Model X", "Model 3"];
+            var queryTitles = ["Were you always this awesome?", "What's wrong with you?", "Honestly, why did you say you liked Fig Newstons?", "How old are you?"];
+            
+            var chocolateQueries = ["Yeah, I was just born like this.", "No, I had to learn, but it came easily.", "No, it took some effort, but at least I don't eat those other cookies."];
+            var oatmealQueries = ["I was raised by wolves.", "My parents never loved me.", "I was bullied as a child.", "I was bullied BY a child."];
+            var figQueries = ["I think it makes me look smart.", "I think they're health.", "I honestly like the pulpy, stringy, seedy, texture of figs."];
+            var sugerQueries = ["*holds up 5 fingers*", "6 years old", "7 years old", "8 years old", "I'm almost two hands!"];
 
-            $("#carMake").change(function(){
-                var currentSelect = $(this).val();
+            $("#cookieChoice").change(function(){
+                var currentSelect = $(this).var();
                 var innerContent = "";
-                $('#carModel').removeAttr('disabled');
+                $('#queries').removeAttr('disabled');
 
                 switch(currentSelect){
-                    case "audi":
-                        for(var i = 0; i < audiModels.length; i++){
-                            innerContent += '<option value="' + audiModels[i].toLowerCase() + '">' + audiModels[i] + "</option>";
+                    case "chocolate":
+                        for(var i = 0; i < chocolateQueries.length; i++){
+                            innerContent += '<option value="' + chocolateQueries[i].toLowerCase() + '">' + chocolateQueries[i] + "</option>";
                         }
                         break;
-                    case "bmw":
-                        for(var i = 0; i < bmwModels.length; i++){
-                            innerContent += '<option value="' + bmwModels[i].toLowerCase() + '">' + bmwModels[i] + "</option>";
+                    case "oatmeal":
+                        for(var i = 0; i < oatmealQueries.length; i++){
+                            innerContent += '<option value="' + oatmealQueries[i].toLowerCase() + '">' + oatmealQueries[i] + "</option>";
                         }
                         break;
-                    case "lexus":
-                        for(var i = 0; i < lexusModels.length; i++){
-                            innerContent += '<option value="' + lexusModels[i].toLowerCase() + '">' + lexusModels[i] + "</option>";
+                    case "fig":
+                        for(var i = 0; i < figQueries.length; i++){
+                            innerContent += '<option value="' + figQueries[i].toLowerCase() + '">' + figQueries[i] + "</option>";
                         }
                         break;
-                    case "merc":
-                        for(var i = 0; i < mercModels.length; i++){
-                            innerContent += '<option value="' + mercModels[i].toLowerCase() + '">' + mercModels[i] + "</option>";
-                        }
-                        break;
-                    case "tesla":
-                        for(var i = 0; i < teslaModels.length; i++){
-                            innerContent += '<option value="' + teslaModels[i].toLowerCase() + '">' + teslaModels[i] + "</option>";
+                    case "suger":
+                        for(var i = 0; i < sugerQueries.length; i++){
+                            innerContent += '<option value="' + sugerQueries[i].toLowerCase() + '">' + sugerQueries[i] + "</option>";
                         }
                         break;
                     default:
                         break;
-                }//end of switch
+                } // end of switch
 
                 console.log(innerContent);
 
-                $('#carModel').html(innerContent);  
-            }); // end of carMake change event
+                $('#queries').html(innerContent);
+            }); // end of queries change event
 
-
-            $("#priceRange").change(function(){
-                var offeredPrice = $(this).val();
-
-                $(this).siblings(".invalid-feedback").remove();
-                if(offeredPrice < 45000){
-                    $(this).after('<div class="invalid-feedback">Don\'t lowball us!!!</div>');
-                }
-                else {
-                    $(this).after('<div class="valid-feedback">We\'ll take it!</div>');
-                }
-            });
-        });// end of document ready
+        }); // end of document ready
     </script>
-</body>
-</html> 
+  </body>
+</html>
