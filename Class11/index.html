@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-quiv="X-UA-Compatible" content="ie=edge">
+        <Title>Canvas 1</Title>
+
+    <style>
+        body {
+            background-color: cadetblue;
+            margin: 0px;
+        }
+
+        #myCanvas{
+            width: 100vw;
+            height: 100vh:
+        }
+    </style>
+    </head>
+
+    <body>
+            <canvas id="myCanvas">
+                This is supposed to be an interactive canvase. Please use a newer browser!
+            </canvas>
+
+            <script>
+                var canvas = document.getElementById("myCnavas");
+                var context = canvas.getContext("2d");
+
+                context.fillStyle = "#FFFFFF";
+                context.fillRect = (0, 0, canvas.Width, canvas.Height);
+
+                context.fillStyle = "#FFa099";
+                context.fillRect(100, 100, 200, 200);
+
+                context.font = "24px Helvetica";
+                context.fillText("This is my text",)
+            </script>
+    </body>
+</html>
