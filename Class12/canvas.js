@@ -3,7 +3,7 @@ var context = canvas.getContext('2d');
 
 var ballX = canvas.width/2;
 var ballY = canvas.width/2;
-var ballColor = 'rgb(0, 155, 255)'
+var ballColor = 'rgb(255, 30, 30)'
 
 var ballRadius = 50;
 
@@ -52,7 +52,10 @@ animate();
 canvas.addEventListener('click', function(event){
     console.log(event);
 
-    if( ballX-event.clientX < ballRadius && ballY - event.clientY < ballRadius){
+    if(ballX-ballRadius < event.clientX && event.clientX < ballX+ballRadius && ballY-ballRadius < event.clientY && event.clientY < ballY+ballRadius){
         console.log('CLICK!!!!');
+    
+        speedX = 0;
+        speedY = 0;
     }
 })
