@@ -1,0 +1,14 @@
+body {
+    background-image: url(media/asphalt.jpg);
+    background-size: 1100px;
+    }
+
+.container {
+    max-width: 1440px;
+}
+
+.navbar {
+
+    background-image: url(media/navbar.gif);
+    min-height: 216px;
+  }
