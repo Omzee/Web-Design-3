@@ -46,60 +46,54 @@
 
     <!-- Sign Up Form -->
     <div class="collapse" id="collapseForm">
-    <div class="container" id="Form">
-      <div class="row forms">
-        <div class="col-12">
-          <form>
-            <div class="form-group row">
-              <label for="staticEmail" class="col-sm-12 col-form-label">Email</label>
-              <div class="col-sm-6">
-                <input type="text" class="form-control" id="staticEmail" placeholder="email@example.com">
+      <div class="container" id="Form">
+        <div class="row forms">
+          <form id="myForm">
+            <div class="col-12">
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-12 col-form-label">Email</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="staticEmail" placeholder="email@example.com" required>
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div class="col-6">
-          <form>
-            <div class="form-group row">
-              <label for="inputPassword" class="col-sm-12 col-form-label">Password</label>
-              <div class="col-sm-12">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            <div class="col-6">
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-12 col-form-label">Password</label>
+                <div class="col-sm-12">
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div class="col-6">
-          <form>
-            <div class="form-group row">
-              <label for="confirmPassword" class="col-sm-12 col-form-label">Confirm Password</label>
-              <div class="col-sm-12">
-                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+            <div class="col-6">
+              <div class="form-group row">
+                <label for="confirmPassword" class="col-sm-12 col-form-label">Confirm Password</label>
+                <div class="col-sm-12">
+                  <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div class="col-12">
-          <form>
-            <div class="form-group row">
-              <label for="requestService" class="col-sm-12 col-form-label">Tell us what you want</label>
-              <div class="col-sm-12">
-                <textarea class="form-control" id="requestService" rows="3" placeholder="I need..."></textarea>
+            <div class="col-12">
+              <div class="form-group row">
+                <label for="requestService" class="col-sm-12 col-form-label">Tell us what you want</label>
+                <div class="col-sm-12">
+                  <textarea class="form-control" id="requestService" rows="3" placeholder="I need..." required></textarea>
+                </div>
               </div>
             </div>
-          </form>
-        </div>
-        <div class="col-12">
-        <div class="form-check form-check-inline col-12">
-            <input class="form-check-input" type="checkbox" id="terms">
-            <label class="form-check-label" for="terms">I have read the terms and conditions</label>
+            <div class="col-12">
+              <div class="form-check form-check-inline col-12">
+                <input class="form-check-input" type="checkbox" id="terms" required>
+                <label class="form-check-label" for="terms">I have read the terms and conditions</label>
+              </div>
+            </div>
+          <div class="col-12 d-flex justify-content-center">
+            <input type="submit" id="confirm" class="btn btn-dark">
           </div>
-        </div>
-        <div class="col-12 d-flex justify-content-center">
-          <button type="button" class="btn btn-dark">confirm</button>
+        </form>
         </div>
       </div>
     </div>
-  </div>
 
   </header>
 
@@ -191,7 +185,6 @@
       </div>
     </div>
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -202,16 +195,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
-    <!-- Carousel -->
-    <script>
-      $('.carousel').carousel({
-        interval: 5400
-      })
-
-      function validate(){
-        
-      }
-    </script>
+    <!-- Optional JavaScript -->
+    <script src="main.js"></script>
 </body>
 
 </html>
