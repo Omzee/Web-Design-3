@@ -8,7 +8,7 @@ body {
 .container {
 }
 
-.navbar {
+#navbarDesktop {
   position: fixed;
   left: 44%;
   transform: translate(-38%, 0);
@@ -27,13 +27,28 @@ body {
     margin: 0 6%;
   } */
 
+  #navbarMobile {
+    position: fixed;
+    left: 50%;
+    transform: translate(-30%, 0);
+    background-image: url(media/navbar_mobile.gif);
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    height: 346px;
+  }
+
 
 .navbar-brand {
   /* position: absolute; */
   width: 15%;
-  top: 65px;
-  left: 5px;
+  /* top: 65px;
+  left: 5px; */
   transform: translate(-8%, 96%);
+}
+
+.navbar-brand-mobile {
+  width: 15%;
+  transform: translate(120%, 232%);
 }
 
 .logo {
@@ -47,6 +62,11 @@ body {
   /* top: 10px;
   left: 10px; */
 }
+.navbar-collapse-mobile{
+  transform: translate(-1%, 117%);
+  width: 100%;
+}
+
 .navbar-light .navbar-nav .nav-link {
     /* position: absolute; */
     color: rgba(0,0,0,1);
